@@ -1,0 +1,57 @@
+﻿<nav id="sidebar">
+    <ul class="list-unstyled components">
+        <li class="@(ViewBag.Current == "Home" ? "active" : "")">
+            <a href="@Url.Action("Index", "Home")">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+        </li>
+        @if (false) /*Verificar rol*/
+        {
+            <li class"">
+                <a href="">
+                    <i class="fas fa-toolbox"></i>
+                    Dashboard
+                </a>
+            </li>
+        }
+        <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-tshirt"></i>
+                Products
+            </a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="">
+                        <i class="fas fa-futbol"></i>
+                        Futbol
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-basketball-ball"></i>
+                        Basketball
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fas fa-football-ball"></i>
+                        American football
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="@(ViewBag.Current == "About" ? "active" : "")">
+            <a href="@Url.Action("About", "Home")">
+                <i class="fas fa-users"></i>
+                About
+            </a>
+        </li>
+        <li class="@(ViewBag.Current == "Contact" ? "active" : "")">
+            <a href="@Url.Action("Contact", "Home")">
+                <i class="fas fa-envelope"></i>
+                Contact
+            </a>
+        </li>
+    </ul>
+</nav>

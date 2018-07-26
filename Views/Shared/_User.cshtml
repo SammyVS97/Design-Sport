@@ -1,0 +1,30 @@
+﻿@if (false) /* Verificar sesión */
+{
+    <li class="nav-item">
+        <a class="nav-link" href="">
+            <i class="fas fa-user-circle"></i>
+            User's name
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="">
+            <i class="fas fa-sign-out-alt"></i>
+            Sign out <!-- Salir -->
+        </a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link" href="#sign-in" data-toggle="modal">
+            <i class="fas fa-sign-in-alt"></i>
+            Sign in <!-- Ingresar -->
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#sign-up" data-toggle="modal">
+            <i class="fas fa-user"></i>
+            Sign up <!-- Registrarse -->
+        </a>
+    </li>
+}

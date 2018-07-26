@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="wrapper">
+        @Html.Partial("_Sidebar")
+        <div id="content">
+            @Html.Partial("_Navbar")
+            @RenderBody()
+            <footer class="">
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+    </div>
+    <!-- Modal Sign in -->
+    <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="sign-in" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="sign-in-title">Sing in</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group social-btn">
+                        <a href="" class="btn btn-block facebook">
+                            <i class="fab fa-facebook-f fa-lg"></i>
+                            <span>Sign in with <b>Facebook</b></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="form-group social-btn">
+                        <a href="" class="btn btn-block twitter">
+                            <i class="fab fa-twitter fa-lg"></i>
+                            <span>Sign in with <b>Twitter</b></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="form-group social-btn">
+                        <a href="" class="btn btn-block google">
+                            <i class="fab fa-google fa-lg"></i>
+                            <span>Sign in with <b>Google</b></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="separator">
+                        <img src="~/Media/ds-icon.png" alt="" width="25" height="25" style="">
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="inputEorU">Email address or username</label>
+                            <input type="text" class="form-control" id="inputEorU" placeholder="Email address or username" required autofocus />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-block toggle-buttons">
+                                Sign in
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label class="float-lg-left float-md-left float-sm-left">
+                                <input type="checkbox" name="remember"> Remember Me
+                            </label>
+                            <label class="float-lg-right float-md-right float-sm-right">
+                                <a href="" class="btn-link">Forgot password?</a>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="float-lg-left float-md-left float-sm-left">
+                                Don't have an  account yet?
+                            </label>
+                            <label class="float-lg-right float-md-right float-sm-right">
+                                <a href="#sign-up" class="btn-link" data-toggle="modal" data-dismiss="modal">Sign up now</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Sign up -->
+    <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="sign-up" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="sign-up-title">Sign up</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group social-btn">
+                        <a href="" class="btn btn-block facebook">
+                            <i class="fab fa-facebook-f fa-lg"></i>
+                            <span>Sign up with <b>Facebook</b></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="form-group social-btn">
+                        <a href="" class="btn btn-block twitter">
+                            <i class="fab fa-twitter fa-lg"></i>
+                            <span>Sign up with <b>Twitter</b></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="form-group social-btn">
+                        <a href="" class="btn btn-block google">
+                            <i class="fab fa-google fa-lg"></i>
+                            <span>Sign up with <b>Google</b></span>
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="separator">
+                        <img src="~/Media/ds-icon.png" alt="" width="25" height="25" style="">
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="inputName">Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Name" required autofocus />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputUsername">Username</label>
+                            <input type="text" class="form-control" id="inputUsername" placeholder="Username" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email address" required autofocus />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputYourPwd">Your password</label>
+                            <input type="password" class="form-control" id="inputYourPwd" placeholder="Your password" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputRepeat">Password</label>
+                            <input type="password" class="form-control" id="inputRepeat" placeholder="Repeat password" required />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg btn-block toggle-buttons">
+                                Sign up
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label class="float-lg-left float-md-left float-sm-left">
+                                Have already an account?
+                            </label>
+                            <label class="float-lg-right float-md-right float-sm-right">
+                                <a href="#sign-in" class="btn-link" data-toggle="modal" data-dismiss="modal">Sign in</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

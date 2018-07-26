@@ -1,0 +1,27 @@
+﻿<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <span class="navbar-brand">
+            <button type="button" id="sidebarCollapse" class="btn toggle-buttons">
+                <i class="fas fa-align-left"></i>
+            </button>
+        </span>
+        <a class="navbar-brand mx-auto" href="@Url.Action("Index", "Home")">
+            <img src="~/Media/ds-icon.png" width="35" height="35" alt="" class="d-inline-block align-top">
+            <span id="ds">Design Sport</span>
+        </a>
+        <button class="btn d-inline-block d-lg-none ml-auto toggle-buttons" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                <li>
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn toggle-buttons" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </li>
+                @Html.Partial("_User")
+            </ul>
+        </div>
+    </div>
+</nav>
